@@ -1,0 +1,20 @@
+.summary-block {
+  --block-bg: theme('colors.white');
+  --hover-scale: 1.02;
+  --transition-speed: 0.3s;
+}
+
+.summary-block-container {
+  transition: 
+    transform var(--transition-speed) ease, 
+    box-shadow var(--transition-speed) ease;
+}
+
+.summary-block-container:hover {
+  transform: scale(var(--hover-scale));
+  box-shadow: 0 12px 20px rgba(0, 132, 255, 0.1);
+}
+
+.summary-block-trend {
+  transition: color var(--transition-speed) ease;
+}

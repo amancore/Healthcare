@@ -1,0 +1,23 @@
+.page-layout {
+  --page-bg: theme('colors.medical.background');
+  --container-bg: theme('colors.white');
+  --transition-speed: 0.3s;
+}
+
+.page-container {
+  transition: 
+    opacity var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+.page-section {
+  @apply bg-white rounded-xl shadow-medical-card;
+  transition: 
+    box-shadow var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+.page-section:hover {
+  box-shadow: 0 15px 25px rgba(0, 132, 255, 0.1);
+  transform: translateY(-5px);
+}

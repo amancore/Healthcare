@@ -1,0 +1,25 @@
+.alert-card {
+  --warning-bg: theme('colors.yellow.50');
+  --success-bg: theme('colors.green.50');
+  --info-bg: theme('colors.primary.50');
+  --transition-speed: 0.3s;
+}
+
+.alert-card-container {
+  transition: 
+    transform var(--transition-speed) ease, 
+    opacity var(--transition-speed) ease;
+}
+
+.alert-card-container:hover {
+  transform: translateX(-5px);
+  opacity: 0.95;
+}
+
+.alert-card-icon {
+  transition: transform var(--transition-speed) ease;
+}
+
+.alert-card-container:hover .alert-card-icon {
+  transform: scale(1.1);
+}

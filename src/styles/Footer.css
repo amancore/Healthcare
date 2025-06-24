@@ -1,0 +1,19 @@
+.footer {
+  --footer-bg: theme('colors.white');
+  --footer-text: theme('colors.medical.muted');
+  --footer-hover: theme('colors.primary.600');
+  --transition-speed: 0.3s;
+}
+
+.footer-container {
+  @apply flex flex-col md:flex-row justify-between items-center;
+}
+
+.footer-social-link {
+  transition: color var(--transition-speed) ease, transform var(--transition-speed) ease;
+}
+
+.footer-social-link:hover {
+  color: var(--footer-hover);
+  transform: scale(1.1);
+}

@@ -1,0 +1,25 @@
+.report-card {
+  --card-bg: theme('colors.white');
+  --card-shadow: theme('boxShadow.medical-card');
+  --hover-scale: 1.02;
+  --transition-speed: 0.3s;
+}
+
+.report-card-container {
+  transition: 
+    transform var(--transition-speed) ease, 
+    box-shadow var(--transition-speed) ease;
+}
+
+.report-card-container:hover {
+  transform: scale(var(--hover-scale));
+  box-shadow: 0 10px 15px rgba(0, 132, 255, 0.1);
+}
+
+.report-card-link {
+  transition: background-color var(--transition-speed) ease;
+}
+
+.report-card-link:hover {
+  background-color: theme('colors.primary.50');
+}

@@ -1,0 +1,25 @@
+.specialist-card {
+  --card-bg: theme('colors.white');
+  --avatar-bg: theme('colors.primary.50');
+  --hover-scale: 1.02;
+  --transition-speed: 0.3s;
+}
+
+.specialist-card-container {
+  transition: 
+    transform var(--transition-speed) ease, 
+    box-shadow var(--transition-speed) ease;
+}
+
+.specialist-card-container:hover {
+  transform: scale(var(--hover-scale));
+  box-shadow: 0 10px 15px rgba(0, 132, 255, 0.1);
+}
+
+.specialist-card-avatar {
+  transition: transform var(--transition-speed) ease;
+}
+
+.specialist-card-container:hover .specialist-card-avatar {
+  transform: rotate(3deg);
+}

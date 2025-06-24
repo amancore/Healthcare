@@ -1,0 +1,25 @@
+.entity-table {
+  --table-bg: theme('colors.white');
+  --header-bg: theme('colors.medical.background');
+  --row-hover-bg: theme('colors.primary.50');
+  --transition-speed: 0.3s;
+}
+
+.entity-table-container {
+  @apply rounded-xl shadow-medical-card overflow-hidden;
+}
+
+.entity-table-header {
+  @apply bg-medical-background;
+}
+
+.entity-table-row {
+  transition: 
+    background-color var(--transition-speed) ease,
+    transform var(--transition-speed) ease;
+}
+
+.entity-table-row:hover {
+  background-color: var(--row-hover-bg);
+  transform: translateX(5px);
+}
