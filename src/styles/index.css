@@ -4,7 +4,7 @@
 
 body {
   @apply bg-medical-background text-medical-text;
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 /* Custom scrollbar */

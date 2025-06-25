@@ -1,32 +1,34 @@
-import React, { Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
-import Loader from './components/Loader'
+import React, { Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import Loader from "./components/Loader";
 
 // Lazy load pages for performance
-const UploadReport = React.lazy(() => import('./pages/UploadReport'))
-const ExtractedReport = React.lazy(() => import('./pages/ExtractedReport'))
-const Dashboard = React.lazy(() => import('./pages/Dashboard'))
-const UserProfile = React.lazy(() => import('./pages/UserProfile'))
-const Alerts = React.lazy(() => import('./pages/Alerts'))
+const UploadReport = React.lazy(() => import("./pages/UploadReport"));
+const ExtractedReport = React.lazy(() => import("./pages/ExtractedReport"));
+const Dashboard = React.lazy(() => import("./pages/Dashboard"));
+const UserProfile = React.lazy(() => import("./pages/UserProfile"));
+const Alerts = React.lazy(() => import("./pages/Alerts"));
 
 const App: React.FC = () => {
   return (
-    <div className="">
+    <div className="flex flex-col min-h-screen">
       <Navbar />
-      <Suspense fallback={<Loader />}>
-        <Routes>
-          <Route path="/" element={<UploadReport />} />
-          <Route path="/report/:id" element={<ExtractedReport />} />
-          <Route path="/dashboard" element={<Dashboard />} />
-          <Route path="/profile" element={<UserProfile />} />
-          <Route path="/alerts" element={<Alerts />} />
-        </Routes>
-      </Suspense>
+      <main className="flex-grow">
+        <Suspense fallback={<Loader />}>
+          <Routes>
+            <Route path="/" element={<UploadReport />} />
+            <Route path="/report/:id" element={<ExtractedReport />} />
+            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/profile" element={<UserProfile />} />
+            <Route path="/alerts" element={<Alerts />} />
+          </Routes>
+        </Suspense>
+      </main>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
